@@ -1,5 +1,5 @@
 {
-  "name": "bookmarklets-cli",
+  "name": "@mkobayashime/bookmarklets-cli",
   "version": "0.1.0",
   "author": "Masaki Kobayashi",
   "license": "MIT",
@@ -34,5 +34,8 @@
     "rollup": "^3.2.3",
     "ts-node": "10.9.1",
     "typescript": "4.8.3"
+  },
+  "scripts": {
+    "prepublishOnly": "make build"
   }
 }
