@@ -28,3 +28,7 @@ typecheck: node_modules
 .PHONY: typecheck.watch
 typecheck.watch: node_modules
 	yarn tsc --noEmit --watch
+
+.PHONY: build
+build: node_modules
+	yarn run rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
