@@ -10,6 +10,7 @@ const config: RollupOptions = {
   },
   plugins: [typescript()],
   external: [
+    "arg",
     "chalk",
     "chokidar",
     "clipboardy",
