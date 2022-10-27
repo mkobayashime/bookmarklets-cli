@@ -1,5 +1,6 @@
 eslint = yarn eslint --ignore-path .gitignore
 prettier = yarn prettier --ignore-path .gitignore
+rollup = yarn run rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
 
 node_modules: package.json yarn.lock
 	yarn
@@ -29,6 +30,10 @@ typecheck: node_modules
 typecheck.watch: node_modules
 	yarn tsc --noEmit --watch
 
+.PHONY: dev
+dev: node_modules
+	$(rollup) --watch
+
 .PHONY: build
 build: node_modules
-	yarn run rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
+	$(rollup)
