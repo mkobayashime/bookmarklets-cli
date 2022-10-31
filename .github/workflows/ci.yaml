@@ -24,3 +24,5 @@ jobs:
         run: make format.check
       - name: Typecheck
         run: make typecheck
+      - name: Depcheck
+        run: yarn run depcheck --ignore-bin-package
