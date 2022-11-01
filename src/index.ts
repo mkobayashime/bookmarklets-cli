@@ -40,23 +40,11 @@ const compile = async (filename: string) => {
 }
 
 const dev = ({ inputsGlob, distDir }: BuildProps) => {
-  let prevOutput = ""
-
   try {
     const watcher = chokidar.watch(inputsGlob).on("change", (filename) => {
       ;(async () => {
         try {
           const { dev, prod } = await compile(filename)
-
-          if (prevOutput === prod) {
-            console.log(
-              chalk.blue(
-                `\n${path.basename(filename)} is unchanged. Skipping...`
-              )
-            )
-            return
-          }
-          prevOutput = prod
 
           console.log(chalk.green(`\nCompiled ${path.basename(filename)}`))
 
