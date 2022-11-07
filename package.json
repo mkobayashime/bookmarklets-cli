@@ -1,9 +1,13 @@
 {
   "name": "@mkobayashime/bookmarklets-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Masaki Kobayashi",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkobayashime/bookmarklets-cli.git"
+  },
   "bin": {
     "bookmarklets-cli": "dist/index.mjs"
   },
