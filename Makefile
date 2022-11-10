@@ -3,7 +3,11 @@ prettier = yarn prettier --ignore-path .gitignore
 rollup = yarn run rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
 
 node_modules: package.json yarn.lock
-	yarn
+ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
+	yarn install --frozen-lockfile
+else
+	yarn install
+endif
 	@touch node_modules
 
 .PHONY: lint
