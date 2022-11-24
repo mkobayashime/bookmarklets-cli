@@ -18,7 +18,7 @@
     "clipboardy": "3.0.0",
     "esbuild": "0.15.13",
     "glob": "8.0.3",
-    "terser": "5.15.0"
+    "terser": "5.16.0"
   },
   "devDependencies": {
     "@mkobayashime/eslint-config": "0.2.0",
