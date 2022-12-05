@@ -16,7 +16,7 @@
     "chalk": "5.1.2",
     "chokidar": "3.5.3",
     "clipboardy": "3.0.0",
-    "esbuild": "0.15.15",
+    "esbuild": "0.15.18",
     "glob": "8.0.3",
     "terser": "5.16.0"
   },
