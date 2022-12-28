@@ -2,41 +2,15 @@ import arg from "arg"
 import chalk from "chalk"
 import chokidar from "chokidar"
 import clipboard from "clipboardy"
-import * as esbuild from "esbuild"
 import { writeFile, mkdir } from "fs/promises"
 import glob from "glob"
 import path from "path"
-import { minify } from "terser"
+
+import { compile } from "./compile"
 
 type BuildProps = {
   inputsGlob: string
   distDir: string
-}
-
-const compile = async (filename: string) => {
-  const esbuildOutput = await esbuild.build({
-    entryPoints: [filename],
-    bundle: true,
-    minify: true,
-    format: "esm",
-    write: false,
-  })
-
-  if (!esbuildOutput.outputFiles[0]) {
-    throw new Error("esbuild outputFiles is empty")
-  }
-  const code = esbuildOutput.outputFiles[0].text
-
-  const prod =
-    "javascript:(()=>{" +
-    encodeURIComponent((await minify(code)).code ?? "") +
-    "})()"
-  const dev = prod.slice(1)
-
-  return {
-    prod,
-    dev,
-  }
 }
 
 const dev = ({ inputsGlob, distDir }: BuildProps) => {
