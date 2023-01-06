@@ -34,6 +34,14 @@ typecheck: node_modules
 typecheck.watch: node_modules
 	yarn tsc --noEmit --watch
 
+.PHONY: test
+test: node_modules
+	yarn run ava
+
+.PHONY: test.watch
+test.watch: node_modules
+	yarn run ava --watch
+
 .PHONY: dev
 dev: node_modules
 	$(rollup) --watch

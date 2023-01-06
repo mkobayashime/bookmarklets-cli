@@ -29,4 +29,6 @@ jobs:
         run: make typecheck
       - name: Depcheck
         run: yarn run depcheck --ignore-bin-package
+      - name: Test
+        run: make test
       - uses: wagoid/commitlint-github-action@v5
