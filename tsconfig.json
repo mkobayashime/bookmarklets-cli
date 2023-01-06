@@ -1,5 +1,5 @@
 {
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "*.js"],
   "compilerOptions": {
     "target": "es2020",
     "module": "ESNext",
