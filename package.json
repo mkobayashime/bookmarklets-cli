@@ -34,7 +34,7 @@
     "@typescript-eslint/parser": "5.62.0",
     "ava": "^5.1.0",
     "depcheck": "^1.4.3",
-    "eslint": "8.31.0",
+    "eslint": "8.45.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-import-resolver-typescript": "3.5.1",
     "eslint-plugin-import": "2.26.0",
