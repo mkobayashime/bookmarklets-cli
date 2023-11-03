@@ -19,7 +19,7 @@
     "clipboardy": "3.0.0",
     "esbuild": "0.19.2",
     "glob": "8.1.0",
-    "terser": "5.19.1"
+    "terser": "5.24.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.0",
