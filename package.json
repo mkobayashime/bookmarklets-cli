@@ -36,12 +36,13 @@
     "depcheck": "1.4.7",
     "eslint": "8.52.0",
     "eslint-config-prettier": "9.0.0",
-    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.0",
     "lefthook": "1.5.2",
     "prettier": "3.0.3",
     "rollup": "4.2.0",
     "ts-node": "^10.9.1",
+    "tslib": "2.6.2",
     "typescript": "5.2.2"
   },
   "scripts": {
