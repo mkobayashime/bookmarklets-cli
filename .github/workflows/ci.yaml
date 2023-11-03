@@ -10,7 +10,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Use Node.js
@@ -36,7 +36,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -49,7 +49,7 @@ jobs:
         run: make test
       - name: Build for E2E
         run: make build
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: mkobayashime/bookmarklets
           path: repo-bookmarklets
