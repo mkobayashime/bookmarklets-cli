@@ -17,10 +17,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-      - uses: actions/cache@v3
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          cache: "yarn"
       - name: ESLint
         run: make lint
       - name: Prettier
@@ -41,10 +38,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-      - uses: actions/cache@v3
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          cache: "yarn"
       - name: Simple test
         run: make test
       - name: Build for E2E
