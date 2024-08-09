@@ -1,4 +1,4 @@
-# `@mkobayashime/bookmarklets-cli`
+# bookmarklets-cli
 
 CLI for [bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet) development
 
