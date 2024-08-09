@@ -1,1 +1,1 @@
-ignores: ["@swc/core", "@commitlint/config-conventional"]
+ignores: ["@swc/core", "@commitlint/config-conventional", 'tsimp']
