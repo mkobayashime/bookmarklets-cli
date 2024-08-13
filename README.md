@@ -43,14 +43,3 @@ npx bookmarklets-cli --watch script.ts
 # glob support
 npx bookmarklets-cli --watch 'src/*.ts'
 ```
-
-## Publishing
-
-```bash
-git checkout -B <newversion>
-npm version [ major | minor | patch ]
-# merge PR
-
-# in main
-npm publish
-```
