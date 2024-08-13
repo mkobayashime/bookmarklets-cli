@@ -11,7 +11,7 @@ env:
   MAKE_YARN_FROZEN_LOCKFILE: 1
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
