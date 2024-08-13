@@ -10,42 +10,34 @@ else
 endif
 	@touch node_modules
 
-.PHONY: lint
-lint: node_modules
+lint: node_modules PHONY
 	$(eslint) .
 
-.PHONY: lint.fix
-lint.fix: node_modules
+lint.fix: node_modules PHONY
 	$(eslint) --fix .
 
-.PHONY: format
-format: node_modules
+format: node_modules PHONY
 	$(prettier) --write .
 
-.PHONY: format.check
-format.check: node_modules
+format.check: node_modules PHONY
 	$(prettier) --check .
 
-.PHONY: typecheck
-typecheck: node_modules
+typecheck: node_modules PHONY
 	yarn tsc --noEmit
 
-.PHONY: typecheck.watch
-typecheck.watch: node_modules
+typecheck.watch: node_modules PHONY
 	yarn tsc --noEmit --watch
 
-.PHONY: test
-test: node_modules
+test: node_modules PHONY
 	yarn run ava
 
-.PHONY: test.watch
-test.watch: node_modules
+test.watch: node_modules PHONY
 	yarn run ava --watch
 
-.PHONY: dev
-dev: node_modules
+dev: node_modules PHONY
 	$(rollup) --watch
 
-.PHONY: build
-build: node_modules
+build: node_modules PHONY
 	$(rollup)
+
+PHONY:
