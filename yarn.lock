@@ -4298,7 +4298,7 @@ tsconfig-paths@^3.15.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tsimp@^2.0.11:
+tsimp@2.0.11:
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/tsimp/-/tsimp-2.0.11.tgz#28b7efb609a070554cedb4309c1a7def662e93ab"
   integrity sha512-wRhMmvar8tWHN3ZmykD8f4B4sjCn/f8DFM67LRY+stf/LPa2Kq8ATE2PIi570/DiDJA8kjjxzos3EgP0LmnFLA==
