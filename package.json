@@ -37,7 +37,7 @@
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
     "lefthook": "1.7.12",
-    "prettier": "3.1.0",
+    "prettier": "3.3.3",
     "rollup": "4.20.0",
     "ts-node": "^10.9.1",
     "tsimp": "2.0.11",
