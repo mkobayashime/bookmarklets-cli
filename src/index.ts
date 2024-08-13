@@ -76,7 +76,31 @@ const build = async ({ inputsGlob, distDir }: BuildProps) => {
     "-W": Boolean,
     "--dist-dir": String,
     "-D": String,
+    "--help": Boolean,
+    "-H": Boolean,
   })
+
+  if (args["--help"] ?? args["-H"]) {
+    console.log(
+      `
+bookmarklets-cli
+https://www.npmjs.com/package/bookmarklets-cli
+
+USAGE
+
+  npx bookmarklets-cli [-W|--watch] [-D|--dist-dir] <files_glob>
+  npx bookmarklets-cli [-H|--help]
+
+EXAMPLE
+
+  npx bookmarklets-cli 'src/*.ts'
+  npx bookmarklets-cli --dist-dir 'out'
+  npx bookmarklets-cli --watch 'src/*.ts'
+`.trim()
+    )
+
+    process.exit(0)
+  }
 
   const watch = args["--watch"] ?? args["-W"]
 
