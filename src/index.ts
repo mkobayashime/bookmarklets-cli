@@ -73,12 +73,12 @@ const build = async ({ inputsGlob, distDir }: BuildProps) => {
 ;(async () => {
   const args = arg({
     "--watch": Boolean,
-    "-w": Boolean,
+    "-W": Boolean,
     "--dist-dir": String,
     "-D": String,
   })
 
-  const watch = args["--watch"] ?? args["-w"]
+  const watch = args["--watch"] ?? args["-W"]
 
   const dist = args["--dist-dir"] ?? args["-D"] ?? "dist"
   await mkdir(dist, { recursive: true })
