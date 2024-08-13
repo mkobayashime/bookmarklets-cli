@@ -6,7 +6,6 @@ const config: RollupOptions = {
   output: {
     dir: "dist",
     entryFileNames: "[name].mjs",
-    banner: "#!/usr/bin/env node\n",
   },
   plugins: [typescript()],
   external: [
