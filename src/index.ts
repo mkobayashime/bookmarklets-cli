@@ -5,7 +5,7 @@ import chalk from "chalk"
 import chokidar from "chokidar"
 import clipboard from "clipboardy"
 import { writeFile, mkdir } from "fs/promises"
-import glob from "glob"
+import { glob } from "glob"
 import path from "path"
 
 import { compile } from "./compile"
@@ -53,7 +53,7 @@ const dev = ({ inputsGlob, distDir }: BuildProps) => {
 
 const build = async ({ inputsGlob, distDir }: BuildProps) => {
   try {
-    const files = glob.sync(inputsGlob)
+    const files = await glob(inputsGlob)
     for (const filepath of files) {
       try {
         const { prod } = await compile(filepath)
