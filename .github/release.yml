@@ -1,8 +1,8 @@
 changelog:
   categories:
-    - title: Changes
-      labels:
-        - "*"
     - title: Dependencies
       labels:
         - dependencies
+    - title: Changes
+      labels:
+        - "*"
