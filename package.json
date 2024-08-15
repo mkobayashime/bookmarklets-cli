@@ -16,7 +16,7 @@
     "chokidar": "3.6.0",
     "clipboardy": "4.0.0",
     "esbuild": "0.23.0",
-    "glob": "8.1.0",
+    "glob": "11.0.0",
     "terser": "5.31.6"
   },
   "devDependencies": {
