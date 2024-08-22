@@ -20,7 +20,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          registry-url: "https://registry.npmjs.org"
+          node-version: "lts/*"
+          cache: "yarn"
       - run: make node_modules
       - run: make build
       - run: npm publish --provenance --access public
