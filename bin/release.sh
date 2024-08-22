@@ -11,6 +11,6 @@ sed -i -E "s@\"version\":\s+\"[^.]+\.[^.]+\.[^.]\"@\"version\": \"$version\"@" p
 yarn run git-cliff --output CHANGELOG.md --tag "$version"
 
 git add .
-# git commit -m "v$version"
+git commit -m "v$version"
 
 echo 'Create PR and merge it.'
