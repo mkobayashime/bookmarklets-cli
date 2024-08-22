@@ -22,6 +22,7 @@ jobs:
         with:
           node-version: "lts/*"
           cache: "yarn"
+          registry-url: "https://registry.npmjs.org"
       - run: make node_modules
       - run: make build
       - run: npm publish --provenance --access public
