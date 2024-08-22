@@ -36,6 +36,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
+    "git-cliff": "2.4.0",
     "lefthook": "1.7.12",
     "prettier": "3.3.3",
     "rollup": "4.20.0",
@@ -47,5 +48,10 @@
   "scripts": {
     "prepare": "lefthook install",
     "prepublishOnly": "make build"
+  },
+  "resolutions": {
+    "strip-ansi": "6.0.1",
+    "string-width": "4.2.2",
+    "wrap-ansi": "7.0.0"
   }
 }
