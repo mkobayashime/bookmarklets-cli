@@ -1,0 +1,10 @@
+[changelog]
+header = """
+# Changelog\n
+All notable changes to this project will be documented in this file.\n
+"""
+
+[git]
+commit_parsers = [
+  { message = '^.*\(deps\)', group = 'Dependencies', scope = '' }
+]

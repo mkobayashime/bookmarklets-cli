@@ -1097,11 +1097,6 @@ ansi-regex@^5.0.1:
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
   integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
 
-ansi-regex@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.1.tgz#3183e38fae9a65d7cb5e53945cd5897d0260a06a"
-  integrity sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==
-
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -2433,6 +2428,50 @@ get-tsconfig@^4.5.0:
   integrity sha512-E5XrT4CbbXcXWy+1jChlZmrmCwd5KGx502kDCXJJ7y898TtWW9FwoG5HfOLVRKmlmDGkWN2HM9Ho+/Y8F0sJDg==
   dependencies:
     resolve-pkg-maps "^1.0.0"
+
+git-cliff-darwin-arm64@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/git-cliff-darwin-arm64/-/git-cliff-darwin-arm64-2.4.0.tgz#997e2b6613628019b906429e73dbf2515a620186"
+  integrity sha512-KImSJhO8pTkKCauYlKmx7vNz3caIIBs0QW3JIS0uwUXGGJas4uuvGXlGTbLqVxdCur2yBwRDD6xobtuLC0yQ4w==
+
+git-cliff-darwin-x64@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/git-cliff-darwin-x64/-/git-cliff-darwin-x64-2.4.0.tgz#70527ce47803517199a44c3aede23df2a22cb5b8"
+  integrity sha512-KtJ/V0i9xxs5iXl+hh1J4wyhMOrMRNylfSQC0lMJ+ScIIr1sZdF9qz4Mk06ZdJD7HnvPWawBhLcpCKVXkaeufQ==
+
+git-cliff-linux-arm64@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/git-cliff-linux-arm64/-/git-cliff-linux-arm64-2.4.0.tgz#42188492726a590591424dfdb3ba1ae5eb386b25"
+  integrity sha512-ZSL5Jw06pgJ0F2e4Dv7j7l69qmq718NA8IKIUscjayc+71iuzyOw0T2tnbkV6H1h1rDjP9LMXGyPtLIvGz62BA==
+
+git-cliff-linux-x64@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/git-cliff-linux-x64/-/git-cliff-linux-x64-2.4.0.tgz#c13e81774a7952090518f0ca6c63b12035e12511"
+  integrity sha512-1ckJ+2io52HuBnEeS87PeFanEPt3BuZoHKcXfkQPYFj9C91ckHgY7OCqze38ejy1V/cfKhlVJsbjbVMxixRaog==
+
+git-cliff-windows-arm64@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/git-cliff-windows-arm64/-/git-cliff-windows-arm64-2.4.0.tgz#971ec832fe902c9b318c6c68d0530839a9602b14"
+  integrity sha512-DZf+C7lTmCvvBjgtOHMcXJC5KaIL+QDE/C6cYxzLMgRcn9wGNTm2ot0jkAN2I1PmSmg4I1/89iiahSWHfG1m4A==
+
+git-cliff-windows-x64@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/git-cliff-windows-x64/-/git-cliff-windows-x64-2.4.0.tgz#9894a08efb9fd8d4b3cbacc492d1b1fd2104b31b"
+  integrity sha512-bYUQIyG975KdPza/bNDxwBFpqTZEvF1zPKlhThgPgdCKdzbdezsgaFuaDbnM+vsmBD751ZJGWLQ7aJCSBG2s/Q==
+
+git-cliff@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/git-cliff/-/git-cliff-2.4.0.tgz#2a133930768de6ffe701d75712346cbad3dde93a"
+  integrity sha512-e+4mMArblL4mrD/auUTa3bf3U1ahAuhIRb1bxTIWCBxnR6UqVctGaLf3pJJufaKi3nqTT7JvrSYu9Q+L6yiAaw==
+  dependencies:
+    execa "^8.0.1"
+  optionalDependencies:
+    git-cliff-darwin-arm64 "2.4.0"
+    git-cliff-darwin-x64 "2.4.0"
+    git-cliff-linux-arm64 "2.4.0"
+    git-cliff-linux-x64 "2.4.0"
+    git-cliff-windows-arm64 "2.4.0"
+    git-cliff-windows-x64 "2.4.0"
 
 git-raw-commits@^4.0.0:
   version "4.0.0"
@@ -4030,7 +4069,7 @@ stack-utils@^2.0.6:
   dependencies:
     escape-string-regexp "^2.0.0"
 
-"string-width-cjs@npm:string-width@^4.2.0":
+"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -4039,14 +4078,14 @@ stack-utils@^2.0.6:
     is-fullwidth-code-point "^3.0.0"
     strip-ansi "^6.0.1"
 
-"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
-  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.2.tgz#dafd4f9559a7585cfba529c6a0a4f73488ebd4c5"
+  integrity sha512-XBJbT3N4JhVumXE0eoLU9DCjcaF92KLNqTmFCnG1pf8duUxFGwtP6AD6nkjw9a3IdiRtL3E2w3JDiE/xi3vOeA==
   dependencies:
     emoji-regex "^8.0.0"
     is-fullwidth-code-point "^3.0.0"
-    strip-ansi "^6.0.1"
+    strip-ansi "^6.0.0"
 
 string-width@^5.0.1, string-width@^5.1.2:
   version "5.1.2"
@@ -4100,26 +4139,12 @@ string_decoder@^1.1.1:
   dependencies:
     safe-buffer "~5.2.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@6.0.1, strip-ansi@^6.0.0, strip-ansi@^6.0.1, strip-ansi@^7.0.1, strip-ansi@^7.1.0:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
   dependencies:
     ansi-regex "^5.0.1"
-
-strip-ansi@^6.0.0, strip-ansi@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
-  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
-  dependencies:
-    ansi-regex "^5.0.1"
-
-strip-ansi@^7.0.1, strip-ansi@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-7.1.0.tgz#d5b6568ca689d8561370b0707685d22434faff45"
-  integrity sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==
-  dependencies:
-    ansi-regex "^6.0.1"
 
 strip-bom@^3.0.0:
   version "3.0.0"
@@ -4468,16 +4493,7 @@ wide-align@^1.1.2:
   dependencies:
     string-width "^1.0.2 || 2 || 3 || 4"
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
-  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
-  dependencies:
-    ansi-styles "^4.0.0"
-    string-width "^4.1.0"
-    strip-ansi "^6.0.0"
-
-wrap-ansi@^7.0.0:
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
