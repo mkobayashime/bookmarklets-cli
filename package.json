@@ -36,7 +36,6 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
-    "git-cliff": "2.4.0",
     "lefthook": "1.7.12",
     "prettier": "3.3.3",
     "rollup": "4.20.0",
