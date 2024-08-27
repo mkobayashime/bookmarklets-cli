@@ -41,8 +41,6 @@ jobs:
           cache: "yarn"
       - name: Simple test
         run: make test
-      - name: Cleanup
-        run: rm -rf .tsimp
       - name: Build for E2E
         run: make build
       - uses: actions/checkout@v4
