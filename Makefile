@@ -29,10 +29,10 @@ typecheck.watch: node_modules PHONY
 	yarn tsc --noEmit --watch
 
 test: node_modules PHONY
-	yarn run ava
+	yarn run vitest run
 
 test.watch: node_modules PHONY
-	yarn run ava --watch
+	yarn run vitest --watch
 
 dev: node_modules PHONY
 	$(rollup) --watch

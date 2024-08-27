@@ -1,6 +1,6 @@
-import test from "ava"
 import path from "node:path"
 import { fileURLToPath } from "url"
+import { describe, it, expect } from "vitest"
 
 import { compile } from "../src/compile.js"
 
@@ -26,12 +26,14 @@ const sources: Array<{ sourceFilename: string; dist: string }> = [
   },
 ]
 
-for (const { sourceFilename, dist } of sources) {
-  test(`It compiles ${sourceFilename} correctly`, async (t) => {
-    const { prod } = await compile(
-      path.resolve(__dirname, "src", sourceFilename)
-    )
+describe(compile, () => {
+  for (const { sourceFilename, dist } of sources) {
+    it(`compiles ${sourceFilename} correctly`, async () => {
+      const { prod } = await compile(
+        path.resolve(__dirname, "src", sourceFilename)
+      )
 
-    t.is(decodeURIComponent(prod), dist)
-  })
-}
+      expect(decodeURIComponent(prod)).toBe(dist)
+    })
+  }
+})
