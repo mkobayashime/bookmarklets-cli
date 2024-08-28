@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "19.4.0",
-    "@commitlint/config-conventional": "19.2.2",
+    "@commitlint/config-conventional": "19.4.1",
     "@mkobayashime/eslint-config": "0.3.0",
     "@mkobayashime/eslint-config-typescript": "1.0.0",
     "@rollup/plugin-typescript": "11.1.6",
