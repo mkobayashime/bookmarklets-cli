@@ -1,78 +1,78 @@
 #!/usr/bin/env node
 
-import arg from "arg"
-import chalk from "chalk"
-import chokidar from "chokidar"
-import clipboard from "clipboardy"
-import { writeFile, mkdir } from "fs/promises"
-import { glob } from "glob"
-import path from "path"
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import arg from "arg";
+import chalk from "chalk";
+import chokidar from "chokidar";
+import clipboard from "clipboardy";
+import { glob } from "glob";
 
-import { compile } from "./compile"
+import { compile } from "./compile";
 
 type BuildProps = {
-  inputsGlob: string
-  distDir: string
-}
+  inputsGlob: string;
+  distDir: string;
+};
 
 const dev = ({ inputsGlob, distDir }: BuildProps) => {
   try {
     const watcher = chokidar.watch(inputsGlob).on("change", (filename) => {
-      ;(async () => {
+      (async () => {
         try {
-          const { dev, prod } = await compile(filename)
+          const { dev, prod } = await compile(filename);
 
-          console.log(chalk.green(`\nCompiled ${path.basename(filename)}`))
+          console.log(chalk.green(`\nCompiled ${path.basename(filename)}`));
 
-          console.log(prod)
-          clipboard.writeSync(dev)
+          console.log(prod);
+          clipboard.writeSync(dev);
 
           await writeFile(
             path.resolve(
               distDir,
-              path.basename(filename).replace(/.ts$/, ".js")
+              path.basename(filename).replace(/.ts$/, ".js"),
             ),
-            prod
-          )
+            prod,
+          );
         } catch (err) {
-          console.error(err)
-          console.log("")
+          console.error(err);
+          console.log("");
         }
       })().catch((err) => {
-        console.error(err)
-      })
-    })
+        console.error(err);
+      });
+    });
 
     watcher.on("ready", () =>
-      console.log(chalk.green("\nDev mode started: watching for file changes"))
-    )
+      console.log(chalk.green("\nDev mode started: watching for file changes")),
+    );
   } catch (err) {
-    console.error(err)
+    console.error(err);
   }
-}
+};
 
 const build = async ({ inputsGlob, distDir }: BuildProps) => {
   try {
-    const files = await glob(inputsGlob)
+    const files = await glob(inputsGlob);
     for (const filepath of files) {
       try {
-        const { prod } = await compile(filepath)
+        const { prod } = await compile(filepath);
         await writeFile(
           path.resolve(distDir, path.basename(filepath).replace(/.ts$/, ".js")),
-          prod
-        )
+          prod,
+        );
       } catch (err) {
-        console.error(err)
-        console.log("")
+        console.error(err);
+        console.log("");
       }
     }
   } catch (err) {
-    console.error(err)
+    console.error(err);
   }
-}
+};
 
 //
-;(async () => {
+(async () => {
   const args = arg({
     "--watch": Boolean,
     "-W": Boolean,
@@ -80,7 +80,7 @@ const build = async ({ inputsGlob, distDir }: BuildProps) => {
     "-D": String,
     "--help": Boolean,
     "-H": Boolean,
-  })
+  });
 
   if (args["--help"] ?? args["-H"]) {
     console.log(
@@ -98,39 +98,39 @@ EXAMPLE
   npx bookmarklets-cli 'src/*.ts'
   npx bookmarklets-cli --dist-dir 'out'
   npx bookmarklets-cli --watch 'src/*.ts'
-`.trim()
-    )
+`.trim(),
+    );
 
-    process.exit(0)
+    process.exit(0);
   }
 
-  const watch = args["--watch"] ?? args["-W"]
+  const watch = args["--watch"] ?? args["-W"];
 
-  const dist = args["--dist-dir"] ?? args["-D"] ?? "dist"
-  await mkdir(dist, { recursive: true })
+  const dist = args["--dist-dir"] ?? args["-D"] ?? "dist";
+  await mkdir(dist, { recursive: true });
 
-  if (args["_"].length === 0) {
-    console.error(chalk.red("Fatal: Input files not passed"))
-    process.exit(1)
+  if (args._.length === 0) {
+    console.error(chalk.red("Fatal: Input files not passed"));
+    process.exit(1);
   }
-  if (args["_"].length > 1) {
+  if (args._.length > 1) {
     console.warn(
       chalk.yellow(
-        "Caution:\nbookmarklets-cli currently doesn't support multiple input arguments.\nPass one glob expression instead."
-      )
-    )
+        "Caution:\nbookmarklets-cli currently doesn't support multiple input arguments.\nPass one glob expression instead.",
+      ),
+    );
   }
 
   const buildProps = {
-    inputsGlob: args["_"][0],
+    inputsGlob: args._[0],
     distDir: dist,
-  }
+  };
 
   if (watch) {
-    dev(buildProps)
+    dev(buildProps);
   } else {
-    await build(buildProps)
+    await build(buildProps);
   }
 })().catch((err) => {
-  console.error(err)
-})
+  console.error(err);
+});
