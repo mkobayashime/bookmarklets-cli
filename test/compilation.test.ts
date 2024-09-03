@@ -1,5 +1,5 @@
 import path from "node:path";
-import { fileURLToPath } from "url";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 
 import { compile } from "../src/compile.js";
@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const sources: Array<{ sourceFilename: string; dist: string }> = [
   {
     sourceFilename: "youtubeTimestampInQuery.ts",
-    dist: 'javascript:(()=>{var o=document.querySelector("video");if(o){let e=Math.floor(o.currentTime),t=window.location.href,r=new URL(t);r.searchParams.set("t",String(e)+"s"),window.history.pushState({},"",r)}})()',
+    dist: 'javascript:(()=>{var o=document.querySelector("video");if(o){let e=Math.floor(o.currentTime),t=window.location.href,r=new URL(t);r.searchParams.set("t",`${String(e)}s`),window.history.pushState({},"",r)}})()',
   },
   {
     sourceFilename: "googleSearchInEn.ts",

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import path from "path";
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
 import arg from "arg";
 import chalk from "chalk";
 import chokidar from "chokidar";
 import clipboard from "clipboardy";
-import { mkdir, writeFile } from "fs/promises";
 import { glob } from "glob";
 
 import { compile } from "./compile";
@@ -109,11 +109,11 @@ EXAMPLE
   const dist = args["--dist-dir"] ?? args["-D"] ?? "dist";
   await mkdir(dist, { recursive: true });
 
-  if (args["_"].length === 0) {
+  if (args._.length === 0) {
     console.error(chalk.red("Fatal: Input files not passed"));
     process.exit(1);
   }
-  if (args["_"].length > 1) {
+  if (args._.length > 1) {
     console.warn(
       chalk.yellow(
         "Caution:\nbookmarklets-cli currently doesn't support multiple input arguments.\nPass one glob expression instead.",
@@ -122,7 +122,7 @@ EXAMPLE
   }
 
   const buildProps = {
-    inputsGlob: args["_"][0],
+    inputsGlob: args._[0],
     distDir: dist,
   };
 

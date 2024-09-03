@@ -15,10 +15,7 @@ export const compile = async (filename: string) => {
   }
   const code = esbuildOutput.outputFiles[0].text;
 
-  const prod =
-    "javascript:(()=>{" +
-    encodeURIComponent((await minify(code)).code ?? "") +
-    "})()";
+  const prod = `javascript:(()=>{${encodeURIComponent((await minify(code)).code ?? "")}})()`;
   const dev = prod.slice(1);
 
   return {
