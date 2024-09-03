@@ -1,5 +1,5 @@
-import typescript from "@rollup/plugin-typescript"
-import { RollupOptions } from "rollup"
+import typescript from "@rollup/plugin-typescript";
+import type { RollupOptions } from "rollup";
 
 const config: RollupOptions = {
   input: "src/index.ts",
@@ -19,7 +19,7 @@ const config: RollupOptions = {
     "path",
     "terser",
   ],
-}
+};
 
 // eslint-disable-next-line import/no-default-export
-export default config
+export default config;

@@ -53,8 +53,5 @@
     "string-width": "4.2.3",
     "wrap-ansi": "7.0.0"
   },
-  "keywords": [
-    "bookmarklets",
-    "bookmarklet"
-  ]
+  "keywords": ["bookmarklets", "bookmarklet"]
 }

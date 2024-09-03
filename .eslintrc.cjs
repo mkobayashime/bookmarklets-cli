@@ -10,6 +10,6 @@ const config = {
   },
   rules: {},
   plugins: ["@typescript-eslint", "import"],
-}
+};
 
-module.exports = config
+module.exports = config;
