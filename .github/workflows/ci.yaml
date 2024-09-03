@@ -18,10 +18,8 @@ jobs:
         with:
           node-version: "lts/*"
           cache: "yarn"
-      - name: ESLint
+      - name: Lint
         run: make lint
-      - name: Prettier
-        run: make format.check
       - name: Typecheck
         run: make typecheck
       - name: Depcheck
