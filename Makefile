@@ -1,12 +1,10 @@
-biome = yarn run biome
-rollup = yarn run rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
+biome = pnpm exec biome
+rollup = pnpm exec rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
+tsc = pnpm exec tsc
+vitest = pnpm exec vitest
 
-node_modules: package.json yarn.lock
-ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
-	yarn install --frozen-lockfile
-else
-	yarn install
-endif
+node_modules: package.json pnpm-*.yaml
+	pnpm install
 	@touch node_modules
 
 lint: node_modules PHONY
@@ -16,16 +14,16 @@ lint.fix: node_modules PHONY
 	$(biome) check --fix .
 
 typecheck: node_modules PHONY
-	yarn tsc --noEmit
+	$(tsc) --noEmit
 
 typecheck.watch: node_modules PHONY
-	yarn tsc --noEmit --watch
+	$(tsc) --noEmit --watch
 
 test: node_modules PHONY
-	yarn run vitest run
+	$(vitest) run
 
 test.watch: node_modules PHONY
-	yarn run vitest watch
+	$(vitest) watch
 
 dev: node_modules PHONY
 	$(rollup) --watch
