@@ -61,6 +61,7 @@ const build = async ({ inputsGlob, distDir }: BuildProps) => {
           path.resolve(distDir, path.basename(filepath).replace(/.ts$/, ".js")),
           prod,
         );
+        console.log(`Compiled ${path.basename(filepath)}`);
       } catch (err) {
         console.error(err);
         console.log("");
