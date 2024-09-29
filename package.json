@@ -40,10 +40,5 @@
     "prepare": "lefthook install",
     "prepublishOnly": "make build"
   },
-  "resolutions": {
-    "strip-ansi": "6.0.1",
-    "string-width": "4.2.3",
-    "wrap-ansi": "7.0.0"
-  },
   "keywords": ["bookmarklets", "bookmarklet"]
 }
