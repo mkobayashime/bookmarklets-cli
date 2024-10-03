@@ -45,7 +45,7 @@ jobs:
         run: >
           corepack enable &&
           make node_modules &&
-          pnpm add -D ../ && make format &&
+          pnpm add -D ../ && make lint.fix &&
           git config user.email 'email' && git config user.name 'name' &&
           git add . && git commit -m 'Use local cli' &&
           make build &&
