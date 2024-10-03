@@ -49,4 +49,4 @@ jobs:
           git config user.email 'email' && git config user.name 'name' &&
           git add . && git commit -m 'Use local cli' &&
           make build &&
-          git add -N . && git diff --exit-code
+          git add -N . && git diff --exit-code --stat
