@@ -29,7 +29,7 @@
     "@types/glob": "8.1.0",
     "@types/node": "20.16.14",
     "depcheck": "1.4.7",
-    "lefthook": "1.7.22",
+    "lefthook": "1.8.0",
     "rollup": "4.24.0",
     "ts-node": "^10.9.1",
     "tslib": "2.7.0",
