@@ -1,11 +1,10 @@
-biome = pnpm exec biome
-rollup = pnpm exec rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
-tsc = pnpm exec tsc
-vitest = pnpm exec vitest
+biome = bunx biome
+rollup = bunx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
+tsc = bunx tsc
+vitest = bunx vitest
 
-node_modules: package.json pnpm-*.yaml
-	pnpm install
-	@touch node_modules
+node_modules: PHONY
+	bun install
 
 lint: node_modules PHONY
 	$(biome) check .

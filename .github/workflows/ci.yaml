@@ -8,17 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          fetch-depth: 0
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-          cache: "pnpm"
+          bun-version: latest
       - run: make node_modules
       - run: make lint
       - run: make typecheck
-      - run: pnpm exec depcheck --ignore-bin-package
+      - run: bunx depcheck --ignore-bin-package
       - uses: wagoid/commitlint-github-action@v6
       - run: make build
   test:
@@ -26,27 +22,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: "lts/*"
-          cache: "pnpm"
+          bun-version: latest
       - run: make node_modules
       - name: Simple test
         run: make test
       - name: Build for E2E
         run: make build
+      - run: bun link
       - uses: actions/checkout@v4
         with:
           repository: mkobayashime/bookmarklets
           path: repo-bookmarklets
       - name: E2E
         working-directory: ./repo-bookmarklets
-        run: >
-          corepack enable &&
-          make node_modules &&
-          pnpm add -D ../ && make lint.fix &&
-          git config user.email 'email' && git config user.name 'name' &&
-          git add . && git commit -m 'Use local cli' &&
-          make build &&
-          git add -N . && git diff --exit-code --stat
+        run: |
+          bun link bookmarklets-cli
+          make build
+          git add -N .
+          git diff --exit-code --stat
