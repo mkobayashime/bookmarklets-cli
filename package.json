@@ -29,11 +29,11 @@
     "@types/node": "22.10.1",
     "depcheck": "1.4.7",
     "lefthook": "1.8.4",
-    "rollup": "4.28.0",
+    "rollup": "4.28.1",
     "ts-node": "^10.9.1",
     "tslib": "2.8.1",
     "typescript": "5.7.2",
-    "vitest": "2.1.6"
+    "vitest": "2.1.8"
   },
   "scripts": {
     "prepare": "lefthook install",
