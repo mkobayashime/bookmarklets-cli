@@ -11,81 +11,81 @@ import { glob } from "glob";
 import { compile } from "./compile";
 
 type BuildProps = {
-  inputsGlob: string;
-  distDir: string;
+	inputsGlob: string;
+	distDir: string;
 };
 
 const dev = ({ inputsGlob, distDir }: BuildProps) => {
-  try {
-    const watcher = chokidar.watch(inputsGlob).on("change", (filename) => {
-      (async () => {
-        try {
-          const { dev, prod } = await compile(filename);
+	try {
+		const watcher = chokidar.watch(inputsGlob).on("change", (filename) => {
+			(async () => {
+				try {
+					const { dev, prod } = await compile(filename);
 
-          console.log(chalk.green(`\nCompiled ${path.basename(filename)}`));
+					console.log(chalk.green(`\nCompiled ${path.basename(filename)}`));
 
-          console.log(prod);
-          clipboard.writeSync(dev);
+					console.log(prod);
+					clipboard.writeSync(dev);
 
-          await writeFile(
-            path.resolve(
-              distDir,
-              path.basename(filename).replace(/.ts$/, ".js"),
-            ),
-            prod,
-          );
-        } catch (err) {
-          console.error(err);
-          console.log("");
-        }
-      })().catch((err) => {
-        console.error(err);
-      });
-    });
+					await writeFile(
+						path.resolve(
+							distDir,
+							path.basename(filename).replace(/.ts$/, ".js"),
+						),
+						prod,
+					);
+				} catch (err) {
+					console.error(err);
+					console.log("");
+				}
+			})().catch((err) => {
+				console.error(err);
+			});
+		});
 
-    watcher.on("ready", () =>
-      console.log(chalk.green("\nDev mode started: watching for file changes")),
-    );
-  } catch (err) {
-    console.error(err);
-  }
+		watcher.on("ready", () =>
+			console.log(chalk.green("\nDev mode started: watching for file changes")),
+		);
+	} catch (err) {
+		console.error(err);
+	}
 };
 
 const build = async ({ inputsGlob, distDir }: BuildProps) => {
-  try {
-    const files = await glob(inputsGlob);
-    for (const filepath of files) {
-      try {
-        const { prod } = await compile(filepath);
-        await writeFile(
-          path.resolve(distDir, path.basename(filepath).replace(/.ts$/, ".js")),
-          prod,
-        );
-        console.log(`Compiled ${path.basename(filepath)}`);
-      } catch (err) {
-        console.error(err);
-        console.log("");
-      }
-    }
-  } catch (err) {
-    console.error(err);
-  }
+	try {
+		const files = await glob(inputsGlob);
+		for (const filepath of files) {
+			try {
+				const { prod } = await compile(filepath);
+				await writeFile(
+					path.resolve(distDir, path.basename(filepath).replace(/.ts$/, ".js")),
+					prod,
+				);
+				console.log(`Compiled ${path.basename(filepath)}`);
+			} catch (err) {
+				console.error(err);
+				console.log("");
+			}
+		}
+	} catch (err) {
+		console.error(err);
+	}
 };
 
 //
 (async () => {
-  const args = arg({
-    "--watch": Boolean,
-    "-W": Boolean,
-    "--dist-dir": String,
-    "-D": String,
-    "--help": Boolean,
-    "-H": Boolean,
-  });
+	const args = arg({
+		"--watch": Boolean,
+		"-W": Boolean,
+		"--dist-dir": String,
+		"-D": String,
+		"--help": Boolean,
+		"-H": Boolean,
+	});
 
-  if (args["--help"] ?? args["-H"]) {
-    console.log(
-      `
+	if (args["--help"] ?? args["-H"]) {
+		console.log(
+			`
 bookmarklets-cli
 https://www.npmjs.com/package/bookmarklets-cli
 
@@ -100,38 +100,38 @@ EXAMPLE
   npx bookmarklets-cli --dist-dir 'out'
   npx bookmarklets-cli --watch 'src/*.ts'
 `.trim(),
-    );
+		);
 
-    process.exit(0);
-  }
+		process.exit(0);
+	}
 
-  const watch = args["--watch"] ?? args["-W"];
+	const watch = args["--watch"] ?? args["-W"];
 
-  const dist = args["--dist-dir"] ?? args["-D"] ?? "dist";
-  await mkdir(dist, { recursive: true });
+	const dist = args["--dist-dir"] ?? args["-D"] ?? "dist";
+	await mkdir(dist, { recursive: true });
 
-  if (args._.length === 0) {
-    console.error(chalk.red("Fatal: Input files not passed"));
-    process.exit(1);
-  }
-  if (args._.length > 1) {
-    console.warn(
-      chalk.yellow(
-        "Caution:\nbookmarklets-cli currently doesn't support multiple input arguments.\nPass one glob expression instead.",
-      ),
-    );
-  }
+	if (args._.length === 0) {
+		console.error(chalk.red("Fatal: Input files not passed"));
+		process.exit(1);
+	}
+	if (args._.length > 1) {
+		console.warn(
+			chalk.yellow(
+				"Caution:\nbookmarklets-cli currently doesn't support multiple input arguments.\nPass one glob expression instead.",
+			),
+		);
+	}
 
-  const buildProps = {
-    inputsGlob: args._[0],
-    distDir: dist,
-  };
+	const buildProps = {
+		inputsGlob: args._[0],
+		distDir: dist,
+	};
 
-  if (watch) {
-    dev(buildProps);
-  } else {
-    await build(buildProps);
-  }
+	if (watch) {
+		dev(buildProps);
+	} else {
+		await build(buildProps);
+	}
 })().catch((err) => {
-  console.error(err);
+	console.error(err);
 });
