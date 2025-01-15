@@ -1,44 +1,44 @@
 {
-  "name": "bookmarklets-cli",
-  "version": "1.1.1",
-  "author": "Masaki Kobayashi",
-  "license": "MIT",
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mkobayashime/bookmarklets-cli.git"
-  },
-  "bin": "dist/index.mjs",
-  "type": "module",
-  "dependencies": {
-    "arg": "5.0.2",
-    "chalk": "5.4.0",
-    "chokidar": "3.6.0",
-    "clipboardy": "4.0.0",
-    "esbuild": "0.24.2",
-    "glob": "11.0.0",
-    "terser": "5.37.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
-    "@mkobayashime/shared-config": "1.0.0",
-    "@rollup/plugin-typescript": "12.1.2",
-    "@swc/core": "1.10.1",
-    "@types/glob": "8.1.0",
-    "@types/node": "22.10.2",
-    "depcheck": "1.4.7",
-    "lefthook": "1.9.2",
-    "rollup": "4.29.0",
-    "ts-node": "^10.9.1",
-    "tslib": "2.8.1",
-    "typescript": "5.7.2",
-    "vitest": "2.1.8"
-  },
-  "scripts": {
-    "prepare": "lefthook install",
-    "prepublishOnly": "make build"
-  },
-  "keywords": ["bookmarklets", "bookmarklet"]
+	"name": "bookmarklets-cli",
+	"version": "1.1.1",
+	"author": "Masaki Kobayashi",
+	"license": "MIT",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mkobayashime/bookmarklets-cli.git"
+	},
+	"bin": "dist/index.mjs",
+	"type": "module",
+	"dependencies": {
+		"arg": "5.0.2",
+		"chalk": "5.4.0",
+		"chokidar": "3.6.0",
+		"clipboardy": "4.0.0",
+		"esbuild": "0.24.2",
+		"glob": "11.0.0",
+		"terser": "5.37.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@commitlint/cli": "19.6.1",
+		"@commitlint/config-conventional": "19.6.0",
+		"@mkobayashime/shared-config": "1.0.0",
+		"@rollup/plugin-typescript": "12.1.2",
+		"@swc/core": "1.10.1",
+		"@types/glob": "8.1.0",
+		"@types/node": "22.10.2",
+		"depcheck": "1.4.7",
+		"lefthook": "1.9.2",
+		"rollup": "4.29.0",
+		"ts-node": "^10.9.1",
+		"tslib": "2.8.1",
+		"typescript": "5.7.2",
+		"vitest": "2.1.8"
+	},
+	"scripts": {
+		"prepare": "lefthook install",
+		"prepublishOnly": "make build"
+	},
+	"keywords": ["bookmarklets", "bookmarklet"]
 }
