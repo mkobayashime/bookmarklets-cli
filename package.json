@@ -21,8 +21,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@commitlint/cli": "19.6.1",
-		"@commitlint/config-conventional": "19.6.0",
+		"@commitlint/cli": "19.7.1",
+		"@commitlint/config-conventional": "19.7.1",
 		"@mkobayashime/shared-config": "1.1.0",
 		"@rollup/plugin-typescript": "12.1.2",
 		"@swc/core": "1.10.7",
