@@ -27,7 +27,7 @@
 		"@rollup/plugin-typescript": "12.1.2",
 		"@swc/core": "1.10.7",
 		"@types/glob": "8.1.0",
-		"@types/node": "22.10.7",
+		"@types/node": "22.13.4",
 		"depcheck": "1.4.7",
 		"lefthook": "1.10.8",
 		"rollup": "4.30.1",
