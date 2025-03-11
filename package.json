@@ -30,7 +30,7 @@
 		"lefthook": "1.10.8",
 		"tsup": "8.4.0",
 		"typescript": "5.8.2",
-		"vitest": "3.0.2"
+		"vitest": "3.0.8"
 	},
 	"scripts": {
 		"prepare": "lefthook install",
