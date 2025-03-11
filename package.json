@@ -15,7 +15,7 @@
 		"chalk": "5.4.1",
 		"chokidar": "3.6.0",
 		"clipboardy": "4.0.0",
-		"esbuild": "0.24.2",
+		"esbuild": "0.25.1",
 		"terser": "5.39.0"
 	},
 	"devDependencies": {
