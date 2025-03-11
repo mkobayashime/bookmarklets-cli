@@ -23,13 +23,11 @@
 		"@commitlint/cli": "19.6.1",
 		"@commitlint/config-conventional": "19.6.0",
 		"@mkobayashime/shared-config": "1.1.0",
-		"@swc/core": "1.10.7",
 		"@types/glob": "8.1.0",
 		"@types/node": "22.10.7",
 		"depcheck": "1.4.7",
 		"glob": "11.0.1",
 		"lefthook": "1.10.8",
-		"ts-node": "^10.9.1",
 		"tsup": "8.4.0",
 		"typescript": "5.8.2",
 		"vitest": "3.0.2"
