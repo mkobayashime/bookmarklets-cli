@@ -1,1 +1,1 @@
-ignores: ["@commitlint/config-conventional", "@mkobayashime/shared-config"]
+ignores: ["@commitlint/config-conventional", "typescript-eslint", "@mkobayashime/shared-config"]

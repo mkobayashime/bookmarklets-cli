@@ -32,11 +32,11 @@ describe(compile, async () => {
 			path.resolve(__dirname, "src", sourceFilename),
 		);
 
-		it(`compiles ${sourceFilename} (raw output)`, async () => {
+		it(`compiles ${sourceFilename} (raw output)`, () => {
 			expect(prod).toBe(dist);
 		});
 
-		it(`compiles ${sourceFilename} (decoded)`, async () => {
+		it(`compiles ${sourceFilename} (decoded)`, () => {
 			expect(decodeURIComponent(prod)).toBe(decodeURIComponent(dist));
 		});
 	}
