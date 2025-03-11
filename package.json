@@ -23,7 +23,7 @@
 		"@commitlint/cli": "19.6.1",
 		"@commitlint/config-conventional": "19.6.0",
 		"@mkobayashime/shared-config": "1.1.0",
-		"@swc/core": "1.10.7",
+		"@swc/core": "1.11.8",
 		"@types/glob": "8.1.0",
 		"@types/node": "22.10.7",
 		"depcheck": "1.4.7",
