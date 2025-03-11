@@ -1,5 +1,5 @@
 biome = bunx biome
-rollup = bunx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript
+tsup = bunx tsup
 tsc = bunx tsc
 vitest = bunx vitest
 
@@ -25,9 +25,9 @@ test.watch: node_modules PHONY
 	$(vitest) watch
 
 dev: node_modules PHONY
-	$(rollup) --watch
+	$(tsup) --watch src
 
 build: node_modules PHONY
-	$(rollup)
+	$(tsup)
 
 PHONY:
