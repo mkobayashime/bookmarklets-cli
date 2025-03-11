@@ -1,1 +1,1 @@
-ignores: ["@swc/core", "@commitlint/config-conventional", "@mkobayashime/shared-config"]
+ignores: ["@commitlint/config-conventional", "@mkobayashime/shared-config"]
