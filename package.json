@@ -9,6 +9,7 @@
 		"url": "https://github.com/mkobayashime/bookmarklets-cli.git"
 	},
 	"bin": "dist/index.js",
+	"files": ["dist"],
 	"type": "module",
 	"dependencies": {
 		"arg": "5.0.2",
