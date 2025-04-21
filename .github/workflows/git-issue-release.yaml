@@ -10,6 +10,10 @@ on:
 jobs:
   action:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: read
     steps:
       - name: git-issue-release
         uses: kouki-dan/git-issue-release@v1
