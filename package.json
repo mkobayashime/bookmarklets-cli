@@ -27,7 +27,7 @@
 		"@types/glob": "8.1.0",
 		"@types/node": "22.15.17",
 		"depcheck": "1.4.7",
-		"eslint": "9.26.0",
+		"eslint": "9.27.0",
 		"glob": "11.0.2",
 		"lefthook": "1.11.12",
 		"tsup": "8.4.0",
