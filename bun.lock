@@ -15,7 +15,7 @@
         "@biomejs/biome": "1.9.4",
         "@commitlint/cli": "19.8.1",
         "@commitlint/config-conventional": "19.8.1",
-        "@mkobayashime/shared-config": "1.2.0",
+        "@mkobayashime/shared-config": "2.0.0",
         "@types/glob": "8.1.0",
         "@types/node": "24.0.3",
         "depcheck": "1.4.7",
@@ -188,7 +188,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
 
-    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@1.2.0", "", { "peerDependencies": { "@biomejs/biome": "^1.9.4", "eslint": "^9.29.0", "typescript": "^5.8.3", "typescript-eslint": "^8.34.1" } }, "sha512-ky00w8xp+S3XcMGBNOytDVTmWhLt5nYmTXsS34QolmD/dPaZ9PHpBQt+i1YLz8GbB5cHD8t//UxQ5zKE45ZK4Q=="],
+    "@mkobayashime/shared-config": ["@mkobayashime/shared-config@2.0.0", "", { "peerDependencies": { "@biomejs/biome": "^2.0.4", "eslint": "^9.29.0", "typescript": "^5.8.3", "typescript-eslint": "^8.34.1" } }, "sha512-Ghc5dERhTrWXiPU0aSIxlxcXppumVZ+bErh5vhdzxxiIO6nEBHBBEtVvlYSs5Ww8xmtMRykbNo+ZanFJejL29g=="],
 
     "@nodelib/fs.scandir": ["@nodelib/fs.scandir@2.1.5", "", { "dependencies": { "@nodelib/fs.stat": "2.0.5", "run-parallel": "^1.1.9" } }, "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="],
 
