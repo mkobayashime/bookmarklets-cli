@@ -20,7 +20,7 @@
 		"terser": "5.41.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.1.2",
 		"@commitlint/cli": "19.8.1",
 		"@commitlint/config-conventional": "19.8.1",
 		"@mkobayashime/shared-config": "1.2.0",
