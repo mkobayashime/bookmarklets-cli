@@ -17,7 +17,7 @@
 		"chokidar": "3.6.0",
 		"clipboardy": "4.0.0",
 		"esbuild": "0.25.6",
-		"terser": "5.41.0"
+		"terser": "5.43.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
