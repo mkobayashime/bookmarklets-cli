@@ -9,7 +9,9 @@
 		"url": "https://github.com/mkobayashime/bookmarklets-cli.git"
 	},
 	"bin": "dist/index.js",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"type": "module",
 	"dependencies": {
 		"arg": "5.0.2",
@@ -20,10 +22,10 @@
 		"terser": "5.41.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.1.2",
 		"@commitlint/cli": "19.8.1",
 		"@commitlint/config-conventional": "19.8.1",
-		"@mkobayashime/shared-config": "1.2.0",
+		"@mkobayashime/shared-config": "2.0.0",
 		"@types/glob": "8.1.0",
 		"@types/node": "24.1.0",
 		"depcheck": "1.4.7",
@@ -39,5 +41,8 @@
 		"prepare": "lefthook install",
 		"prepublishOnly": "make build"
 	},
-	"keywords": ["bookmarklets", "bookmarklet"]
+	"keywords": [
+		"bookmarklets",
+		"bookmarklet"
+	]
 }
