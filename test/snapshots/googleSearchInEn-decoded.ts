@@ -1,0 +1,1 @@
+javascript:(()=>{if(window.location.href.startsWith("https://www.google.com/search")){let o=new URL(window.location.href);o.searchParams.set("lr","lang_en"),window.location.href=o.toString()}})()

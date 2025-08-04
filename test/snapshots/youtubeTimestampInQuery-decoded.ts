@@ -1,0 +1,1 @@
+javascript:(()=>{var o=document.querySelector("video");if(o){let e=Math.floor(o.currentTime),t=window.location.href,r=new URL(t);r.searchParams.set("t",`${String(e)}s`),window.history.pushState({},"",r)}})()

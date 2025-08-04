@@ -1,5 +1,6 @@
 {
 	"include": ["**/*.ts", "*.js"],
+	"exclude": ["**/snapshots/*"],
 	"compilerOptions": {
 		"target": "es2020",
 		"module": "ESNext",
