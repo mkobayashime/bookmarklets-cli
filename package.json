@@ -29,7 +29,7 @@
 		"@types/glob": "9.0.0",
 		"@types/node": "24.3.0",
 		"depcheck": "1.4.7",
-		"eslint": "9.32.0",
+		"eslint": "9.35.0",
 		"glob": "11.0.3",
 		"lefthook": "1.12.3",
 		"tsup": "8.5.0",
