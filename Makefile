@@ -5,7 +5,11 @@ tsc = bunx tsc
 vitest = bunx vitest
 
 node_modules: PHONY
+ifeq ($(CI), true)
+	bun install --frozen-lockfile
+else
 	bun install
+endif
 
 lint: node_modules PHONY
 	$(biome) check .
