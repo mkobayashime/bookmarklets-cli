@@ -11,7 +11,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
@@ -25,7 +25,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
@@ -35,7 +35,7 @@ jobs:
       - name: Build for E2E
         run: make build
       - run: bun link
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           repository: mkobayashime/bookmarklets
           path: repo-bookmarklets
