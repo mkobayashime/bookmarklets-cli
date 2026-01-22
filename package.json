@@ -27,7 +27,7 @@
 		"@commitlint/config-conventional": "19.8.1",
 		"@mkobayashime/shared-config": "2.0.0",
 		"@types/glob": "9.0.0",
-		"@types/node": "24.4.0",
+		"@types/node": "24.10.9",
 		"depcheck": "1.4.7",
 		"eslint": "9.39.2",
 		"glob": "11.0.3",
