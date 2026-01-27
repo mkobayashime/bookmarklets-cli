@@ -35,7 +35,7 @@
 		"tsup": "8.5.0",
 		"typescript": "5.9.2",
 		"typescript-eslint": "8.53.1",
-		"vitest": "3.2.4"
+		"vitest": "4.0.17"
 	},
 	"scripts": {
 		"prepare": "lefthook install",
