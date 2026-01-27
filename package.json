@@ -30,7 +30,7 @@
 		"@types/node": "25.0.9",
 		"depcheck": "1.4.7",
 		"eslint": "9.39.2",
-		"glob": "11.0.3",
+		"glob": "11.1.0",
 		"lefthook": "2.0.15",
 		"tsup": "8.5.1",
 		"typescript": "5.9.3",
