@@ -23,8 +23,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.3.11",
-		"@commitlint/cli": "19.8.1",
-		"@commitlint/config-conventional": "19.8.1",
+		"@commitlint/cli": "20.3.1",
+		"@commitlint/config-conventional": "20.3.1",
 		"@mkobayashime/shared-config": "2.0.0",
 		"@types/glob": "9.0.0",
 		"@types/node": "25.0.9",
