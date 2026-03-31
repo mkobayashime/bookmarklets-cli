@@ -30,7 +30,7 @@
 		"@types/node": "25.5.0",
 		"depcheck": "1.4.7",
 		"eslint": "10.1.0",
-		"eslint-config-flat-gitignore": "2.2.1",
+		"eslint-config-flat-gitignore": "2.3.0",
 		"glob": "11.1.0",
 		"lefthook": "2.1.2",
 		"tsup": "8.5.1",
