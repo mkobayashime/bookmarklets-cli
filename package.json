@@ -34,7 +34,7 @@
 		"glob": "11.1.0",
 		"lefthook": "2.1.2",
 		"tsup": "8.5.1",
-		"typescript": "5.9.3",
+		"typescript": "6.0.3",
 		"typescript-eslint": "8.60.1",
 		"vitest": "4.1.0"
 	},
