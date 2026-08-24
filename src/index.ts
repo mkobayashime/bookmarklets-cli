@@ -2,6 +2,7 @@
 
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+
 import arg from "arg";
 import chalk from "chalk";
 import chokidar from "chokidar";
@@ -28,10 +29,7 @@ const dev = ({ inputsGlob, distDir }: BuildProps) => {
 					clipboard.writeSync(dev);
 
 					await writeFile(
-						path.resolve(
-							distDir,
-							path.basename(filename).replace(/.ts$/, ".js"),
-						),
+						path.resolve(distDir, path.basename(filename).replace(/.ts$/, ".js")),
 						prod,
 					);
 				} catch (err) {
