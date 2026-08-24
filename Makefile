@@ -1,5 +1,5 @@
-biome = bunx biome
-eslint = bunx eslint
+oxfmt = bunx oxfmt
+oxlint = bunx oxlint
 tsup = bunx tsup
 tsc = bunx tsc
 vitest = bunx vitest
@@ -12,12 +12,12 @@ else
 endif
 
 lint: node_modules PHONY
-	$(biome) check .
-	$(eslint) .
+	$(oxfmt) --check
+	$(oxlint) --type-aware
 
 lint.fix: node_modules PHONY
-	$(biome) check --fix .
-	$(eslint) --fix .
+	$(oxfmt)
+	$(oxlint) --fix --type-aware
 
 typecheck: node_modules PHONY
 	$(tsc) --noEmit

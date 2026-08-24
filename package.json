@@ -22,20 +22,18 @@
 		"terser": "5.41.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.4",
 		"@commitlint/cli": "20.4.0",
 		"@commitlint/config-conventional": "20.4.0",
-		"@mkobayashime/shared-config": "4.1.0",
 		"@types/glob": "9.0.0",
 		"@types/node": "25.5.0",
 		"depcheck": "1.4.7",
-		"eslint": "10.2.1",
-		"eslint-config-flat-gitignore": "2.3.0",
 		"glob": "11.1.0",
 		"lefthook": "2.1.2",
+		"oxfmt": "0.64.0",
+		"oxlint": "1.79.0",
+		"oxlint-tsgolint": "7.0.2001",
 		"tsup": "8.5.1",
 		"typescript": "5.9.3",
-		"typescript-eslint": "8.60.1",
 		"vitest": "4.1.0"
 	},
 	"scripts": {
