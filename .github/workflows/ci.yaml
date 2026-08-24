@@ -11,22 +11,22 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
       - run: make node_modules
       - run: make lint
       - run: make typecheck
       - run: bunx depcheck --ignore-bin-package
-      - uses: wagoid/commitlint-github-action@v6
+      - uses: wagoid/commitlint-github-action@v6.2.1
       - run: make build
   test:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
       - run: make node_modules
@@ -35,7 +35,7 @@ jobs:
       - name: Build for E2E
         run: make build
       - run: bun link
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           repository: mkobayashime/bookmarklets
           path: repo-bookmarklets
