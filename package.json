@@ -35,7 +35,7 @@
 		"@types/glob": "9.0.0",
 		"@types/node": "26.2.0",
 		"depcheck": "1.4.7",
-		"glob": "11.1.0",
+		"glob": "13.0.6",
 		"lefthook": "2.1.2",
 		"oxfmt": "0.64.0",
 		"oxlint": "1.79.0",
