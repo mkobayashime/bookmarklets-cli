@@ -38,7 +38,7 @@
 		"glob": "11.1.0",
 		"lefthook": "2.1.2",
 		"oxfmt": "0.64.0",
-		"oxlint": "1.79.0",
+		"oxlint": "1.80.0",
 		"oxlint-tsgolint": "7.0.2001",
 		"tsup": "8.5.1",
 		"typescript": "5.9.3",
