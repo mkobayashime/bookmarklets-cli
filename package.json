@@ -37,7 +37,7 @@
 		"depcheck": "1.4.7",
 		"glob": "11.1.0",
 		"lefthook": "2.1.2",
-		"oxfmt": "0.64.0",
+		"oxfmt": "0.65.0",
 		"oxlint": "1.80.0",
 		"oxlint-tsgolint": "7.0.2001",
 		"tsup": "8.5.1",
