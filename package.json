@@ -36,13 +36,13 @@
 		"@types/node": "26.2.0",
 		"depcheck": "1.4.7",
 		"glob": "11.1.0",
-		"lefthook": "2.1.2",
+		"lefthook": "2.1.14",
 		"oxfmt": "0.67.0",
 		"oxlint": "1.82.0",
-		"oxlint-tsgolint": "7.0.2001",
+		"oxlint-tsgolint": "7.0.2002",
 		"tsup": "8.5.1",
 		"typescript": "7.0.2",
 		"vite": "8.3.0",
-		"vitest": "5.0.0"
+		"vitest": "5.0.1"
 	}
 }
