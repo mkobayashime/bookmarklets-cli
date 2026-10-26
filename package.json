@@ -27,7 +27,7 @@
 		"chokidar": "3.6.0",
 		"clipboardy": "5.3.2",
 		"esbuild": "0.27.2",
-		"terser": "5.41.0"
+		"terser": "5.51.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "21.2.2",
